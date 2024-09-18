@@ -7,31 +7,31 @@
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (event) {
-
-    //  reload prevent 
+    //  reload prevent
     event.preventDefault();
 
+    // get the input money value
     const inputMoney = document.getElementById("input-money-amount").value;
 
+    // get the pinNumber value
     const pinNumber = document.getElementById("pin-number").value;
 
     // pin number condition
     if (pinNumber === "1234") {
-
-        // previous amount value 
+      // get the previous amount value
       const previousAmount =
         document.getElementById("previous-amount").innerText;
 
-        // convert to integer/float number
+      // convert to integer/float number
       const addMoney = parseFloat(inputMoney);
       const previousMoney = parseFloat(previousAmount);
 
-    //   sum the newAmount = inputAmount + previousAmount
+      //   sum the newAmount = inputAmount + previousAmount
       let newAmount = addMoney + previousMoney;
 
-    //   update previous amount
+      //  update previous amount
       document.getElementById("previous-amount").innerText = newAmount;
     } else {
-      alert("Wrong Information! Please try again");
+      alert("Failed to add money! Please try again");
     }
   });

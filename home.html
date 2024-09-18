@@ -38,8 +38,9 @@
             <div class="divider"></div>
 
             <!-- add money start -->
-
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -76,14 +77,53 @@
                 </div>
               </form>
             </div>
-
             <!-- add money end -->
-             
+
+            <!-- cash out start -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">Amount</span>
+                  </label>
+                  <input
+                    id="cash-out-amount"
+                    type="text"
+                    placeholder="Enter your Amount"
+                    class="input input-bordered rounded-full"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text font-bold">4 Digit Pin</span>
+                  </label>
+                  <input
+                    id="cash-out-pin"
+                    type="password"
+                    placeholder="Enter 4 Digit Pin"
+                    autocomplete="off"
+                    class="input input-bordered rounded-full"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button
+                    id="cash-out-btn"
+                    class="btn btn-primary rounded-full"
+                  >
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- cash out end -->
           </div>
         </div>
       </div>
     </main>
 
     <script src="./js/home.js"></script>
+    <script src="./js/cash-out.js"></script>
   </body>
 </html>
