@@ -8,18 +8,10 @@ document
     const pinNumber = document.getElementById("number").value;
     console.log(phoneNumber, pinNumber);
     // validate phone and pin
-    if(phoneNumber === "5" && pinNumber  === "1234"){
-        console.log("Your are logged in");
-        window.location.href = "../home.html"
+    if (phoneNumber === "01700000017" && pinNumber === "1234") {
+      console.log("Your are logged in");
+      window.location.href = "../home.html";
+    } else {
+      alert("wrong phone number or pin number");
     }
-    else{
-        alert("wrong phone number or pin number")
-    }
-
-
-
-
-
-
-
   });
